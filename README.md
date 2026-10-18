@@ -87,6 +87,10 @@ npm run db:setup      # migrate + seed
 
 ## Deploy (Vercel + Postgres)
 
+[![Vercel дээр deploy хийх](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftselmegjargalshi-png%2F-&project-name=nomad-business&repository-name=nomad-business&env=AUTH_SECRET&envDescription=Urt%20sanamsargui%20mur%20(openssl%20rand%20-base64%2048)&envLink=https%3A%2F%2Fgithub.com%2Ftselmegjargalshi-png%2F-%2Fblob%2Fmain%2F.env.example)
+
+Товч дарж, `AUTH_SECRET`-д `openssl rand -base64 48`-ийн үр дүнг оруулна. Build command-ыг `npm run vercel-build` болгож тохируулна.
+
 1. Postgres үүсгэ (Supabase, Neon гэх мэт) ба холболтын мөрийг ав.
 2. Репог Vercel-д холбо.
 3. Environment variables: `DATABASE_URL`, `AUTH_SECRET` (урт санамсаргүй), `NEXT_PUBLIC_SITE_URL`, хэрэв хүсвэл `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `SEED_DEMO_ACCOUNTS`.
